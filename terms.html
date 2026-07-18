@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service – Sarthak Mail</title>
+    <meta name="description" content="Terms of service for Sarthak Mail – free, anonymous, disposable email." />
+    <link rel="canonical" href="https://sarthakmail.vercel.app/terms.html" />
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script src="https://unpkg.com/lucide@latest">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #0c0d12; color: #e4e7f0; min-height: 100vh; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.3; }
+        .card { background: #14161e; border: 1px solid rgba(255,255,255,0.04); border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: border-color 0.2s ease; }
+        .card:hover { border-color: rgba(139,92,246,0.12); }
+        .nav-link { color: #7a7f92; transition: color 0.2s ease; font-size: 0.85rem; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 8px; transition: all 0.2s ease; }
+        .nav-link:hover { color: #a78bfa; background: rgba(124,58,237,0.06); }
+        .nav-link.active { color: #a78bfa; background: rgba(124,58,237,0.08); }
+        .footer-link { color: #6a6f82; transition: color 0.2s ease; font-size: 0.8rem; text-decoration: none; }
+        .footer-link:hover { color: #a78bfa; }
+        .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; transition: all 0.3s ease; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #c8cdd8; border-radius: 4px; transition: all 0.3s ease; transform-origin: center; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-nav { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.23,1,0.32,1), opacity 0.3s ease; opacity: 0; }
+        .mobile-nav.open { max-height: 300px; opacity: 1; }
+        .content-section p { color: #9499aa; line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+        .content-section h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+        .content-section h3 { font-size: 1.15rem; font-weight: 600; color: #fff; margin: 1.5rem 0 0.5rem 0; }
+        .content-section ul { list-style: none; padding: 0; margin: 0.75rem 0 1.25rem 0; }
+        .content-section ul li { padding: 0.4rem 0 0.4rem 1.75rem; position: relative; color: #9499aa; font-size: 0.95rem; line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.02); }
+        .content-section ul li:last-child { border-bottom: none; }
+        .content-section ul li::before { content: '▸'; position: absolute; left: 0; color: #7c3aed; font-weight: 700; }
+        @media (max-width:640px) { .desktop-nav { display: none !important; } }
+        @media (min-width:641px) { .mobile-nav { display: none !important; } .hamburger-wrapper { display: none !important; } }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0c0d12; }
+        ::-webkit-scrollbar-thumb { background: #2a2d3a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="w-full max-w-5xl mx-auto px-4 md:px-6 py-5 md:py-7">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Sarthak Mail" class="w-10 h-10 md:w-11 md:h-11 rounded-xl object-cover" onerror="this.style.display='none'" />
+                <div>
+                    <h1 class="text-white font-bold text-xl md:text-2xl tracking-tight leading-none">Sarthak</h1>
+                    <span class="text-[10px] font-medium text-[#5a5f72] tracking-[0.15em] uppercase">Temp Mail</span>
+                </div>
+            </div>
+
+            <nav class="desktop-nav flex items-center gap-2">
+                <a href="index.html" class="nav-link" data-page="index">Home</a>
+                <a href="privacy.html" class="nav-link" data-page="privacy">Privacy</a>
+                <a href="terms.html" class="nav-link active" data-page="terms">Terms</a>
+                <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <span class="text-[10px] text-[#3a3f52] hidden sm:inline">100% free</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/40 animate-pulse"></span>
+                <div class="hamburger-wrapper">
+                    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-nav mt-4" id="mobileNav">
+            <div class="flex flex-col items-center gap-1 bg-[#14161e] rounded-xl p-4 border border-white/5">
+                <a href="index.html" class="nav-link w-full text-center py-2.5" data-page="index">Home</a>
+                <a href="privacy.html" class="nav-link w-full text-center py-2.5" data-page="privacy">Privacy</a>
+                <a href="terms.html" class="nav-link active w-full text-center py-2.5" data-page="terms">Terms</a>
+                <a href="contact.html" class="nav-link w-full text-center py-2.5" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="w-full max-w-5xl mx-auto px-4 md:px-6 pb-12">
+        <section class="mt-6 content-section">
+            <div class="card p-6 md:p-10">
+                <div class="flex items-center gap-3 mb-5">
+                    <i data-lucide="file-text" class="w-6 h-6 text-[#7c3aed]"></i>
+                    <h2>Terms of Service</h2>
+                </div>
+
+                <p><strong class="text-white">Last updated:</strong> 2026</p>
+
+                <p>
+                    Welcome to Sarthak Mail. By using our service, you agree to the following terms and conditions. Please read them carefully.
+                </p>
+
+                <h3>1. Acceptance of Terms</h3>
+                <p>
+                    By accessing and using Sarthak Mail, you accept and agree to be bound by these terms. If you do not agree, please do not use the service. We reserve the right to update these terms at any time, and your continued use constitutes acceptance of any changes.
+                </p>
+
+                <h3>2. Service Description</h3>
+                <p>
+                    Sarthak Mail is a free, anonymous, disposable email service. It allows users to generate temporary email addresses to receive emails without exposing their real identity. The service is provided "as is" and is intended for legitimate, non‑malicious use.
+                </p>
+
+                <h3>3. User Responsibilities</h3>
+                <ul>
+                    <li><strong class="text-white">Compliance with Laws:</strong> You agree to use the service in compliance with all applicable local, national, and international laws.</li>
+                    <li><strong class="text-white">No Malicious Activity:</strong> You may not use Sarthak Mail for spamming, phishing, distributing malware, fraud, or any other harmful or illegal activity.</li>
+                    <li><strong class="text-white">No Account Hijacking:</strong> You may not attempt to access or compromise the accounts of other users or the mail.tm service.</li>
+                    <li><strong class="text-white">Respectful Use:</strong> You may not use the service to harass, abuse, or threaten others.</li>
+                </ul>
+
+                <h3>4. Privacy & Data</h3>
+                <p>
+                    We do not collect, store, or share any personal data. Your temporary email address is created and managed by the mail.tm API. Please review our <a href="privacy.html" class="text-[#a78bfa] hover:underline">Privacy Policy</a> for complete details.
+                </p>
+
+                <h3>5. Intellectual Property</h3>
+                <p>
+                    The design, code, and content of Sarthak Mail are the property of Sarthak Gupta and are protected by copyright and intellectual property laws. You may not copy, reproduce, or distribute any part of the service without explicit permission.
+                </p>
+
+                <h3>6. Third-Party Services</h3>
+                <p>
+                    Sarthak Mail relies on the <strong class="text-[#a78bfa]">mail.tm</strong> API for email functionality. We are not responsible for the availability, reliability, or security of third‑party services. Use of third‑party services is subject to their respective terms and policies.
+                </p>
+
+                <h3>7. Disclaimers</h3>
+                <ul>
+                    <li><strong class="text-white">No Warranty:</strong> Sarthak Mail is provided "as is" without any warranties, express or implied. We do not guarantee that the service will be uninterrupted, error‑free, or secure.</li>
+                    <li><strong class="text-white">Use at Your Own Risk:</strong> You are solely responsible for your use of the service and any consequences that may arise.</li>
+                    <li><strong class="text-white">No Liability:</strong> To the fullest extent permitted by law, we disclaim all liability for any damages arising from your use of the service.</li>
+                </ul>
+
+                <h3>8. Indemnification</h3>
+                <p>
+                    You agree to indemnify and hold harmless Sarthak Mail and its developer from any claims, damages, losses, or expenses arising from your use of the service or violation of these terms.
+                </p>
+
+                <h3>9. Termination</h3>
+                <p>
+                    We reserve the right to suspend or terminate your access to the service at any time, without notice, for any reason, including violation of these terms.
+                </p>
+
+                <h3>10. Governing Law</h3>
+                <p>
+                    These terms are governed by the laws of India. Any disputes arising from the use of this service shall be subject to the exclusive jurisdiction of the courts in India.
+                </p>
+
+                <h3>11. Contact</h3>
+                <p>
+                    If you have any questions regarding these terms, please visit our <a href="contact.html" class="text-[#a78bfa] hover:underline">Contact page</a>.
+                </p>
+
+                <p class="text-[#4a4f62] text-xs mt-6">
+                    Last reviewed: 2026 – Sarthak Mail Terms of Service
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full max-w-5xl mx-auto px-4 md:px-6 py-6 border-t border-white/5 text-center">
+        <p class="text-[11px] text-[#4a4f62] font-medium tracking-wide">
+            Developed By <span class="text-[#a78bfa] font-semibold">Sarthak Gupta</span>
+        </p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            mobileNav.classList.toggle('open');
+        });
+        document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                mobileNav.classList.remove('open');
+            });
+        });
+
+        (function highlightNav() {
+            const currentPage = window.location.pathname.split('/').pop() || 'terms.html';
+            const pageMap = { 'privacy.html': 'privacy', 'terms.html': 'terms', 'contact.html': 'contact', 'index.html': 'index' };
+            const activePage = pageMap[currentPage] || 'terms';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.dataset.page === activePage) link.classList.add('active');
+                else link.classList.remove('active');
+            });
+        })();
+
+        document.addEventListener('click', () => setTimeout(() => lucide.createIcons(), 50));
+    </script>
+</body>
+</html>
