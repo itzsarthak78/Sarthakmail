@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+# (Optional) अगर root को index.html पर रीडायरेक्ट करना है – Netlify default में करता है, पर अगर चाहें:
+# [[redirects]]
+#   from = "/"
+#   to = "/index.html"
+#   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
